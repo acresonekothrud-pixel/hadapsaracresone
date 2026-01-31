@@ -1,18 +1,131 @@
-<form action="https://formspree.io/f/mrekdvde" method="POST">
-  <label>
-    Your Name:
-    <input type="text" name="name" required>
-  </label>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quick Property Enquiry</title>
 
-  <label>
-    Your Email:
-    <input type="email" name="email" required>
-  </label>
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-  <label>
-    Message:
-    <textarea name="message" required></textarea>
-  </label>
+.lead-form{
+  width:100%;
+  max-width:420px;
+  background:#ffffff;
+  padding:28px 26px;
+  border-radius:14px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
 
-  <button type="submit">Send</button>
-</form>
+.lead-form h2{
+  text-align:center;
+  margin-bottom:6px;
+  color:#1f2d3d;
+}
+
+.lead-form p{
+  text-align:center;
+  font-size:14px;
+  color:#6c757d;
+  margin-bottom:20px;
+}
+
+.field{
+  margin-bottom:14px;
+}
+
+.field label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:5px;
+  color:#34495e;
+}
+
+.field input,
+.field select{
+  width:100%;
+  padding:11px 12px;
+  border-radius:8px;
+  border:1px solid #dcdcdc;
+  outline:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.field input:focus,
+.field select:focus{
+  border-color:#2e86de;
+  box-shadow:0 0 0 3px rgba(46,134,222,0.15);
+}
+
+.submit-btn{
+  margin-top:10px;
+  width:100%;
+  padding:12px;
+  background:linear-gradient(135deg,#2e86de,#1b4f72);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.submit-btn:hover{
+  opacity:0.95;
+}
+</style>
+</head>
+<body>
+
+<div class="lead-form">
+
+  <h2>Property Enquiry</h2>
+  <p>Please share your requirement</p>
+
+  <form action="https://formspree.io/f/mrekdvde" method="POST">
+
+    <div class="field">
+      <label>Purpose of Purchase</label>
+      <select name="purpose" required>
+        <option value="">Select purpose</option>
+        <option>Investment</option>
+        <option>Self Use</option>
+        <option>Rental</option>
+        <option>Business</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Full Name</label>
+      <input type="text" name="full_name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="field">
+      <label>Phone Number</label>
+      <input type="tel" name="phone" placeholder="Enter your mobile number" required>
+    </div>
+
+    <div class="field">
+      <label>Street Address</label>
+      <input type="text" name="street_address" placeholder="Enter your street / area address" required>
+    </div>
+
+    <button class="submit-btn" type="submit">
+      Submit Enquiry
+    </button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
